@@ -7,6 +7,7 @@ const AppRoutes = () => (
   <main>
     <Switch>
       <Route exact path='/' component={Home} />
+      <Route exact path='/randomu' component={Home} />
       <Route path='/home' component={Home} />
       <Route path='/contact' component={Contact} />
       <Route component={NotFound} />
