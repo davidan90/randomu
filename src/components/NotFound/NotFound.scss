@@ -1,0 +1,36 @@
+@import "mixins";
+
+.not-found {
+  @include flex(column, center, inherit);
+
+  padding: 1rem;
+
+  .not-found__404 {
+    @include flex(row, center, center);
+
+    .number {
+      @include flex(column, center, center);
+
+      font-size: 7rem;
+      font-weight: bold;
+      height: 150px;
+      width: 75px;
+
+      &.cero {
+        background-image: url("../../assets/img/cero_not_found.png");
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+
+  .not-found__text {
+    text-align: center;
+
+    p {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}

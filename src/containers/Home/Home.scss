@@ -1,0 +1,11 @@
+@import "mixins";
+
+.home-section {
+  @include flex(column, center, center);
+
+  article {
+    @include flex(column, center, center);
+
+    width: 100%;
+  }
+}

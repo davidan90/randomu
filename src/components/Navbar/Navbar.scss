@@ -1,0 +1,21 @@
+@import "responsive";
+
+.navbar {
+  ul {
+    li {
+      border-right: 1px solid;
+      display: inline;
+      font-size: 1.2rem;
+      padding: 0 1.5rem;
+      text-transform: uppercase;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  @media #{$screen-s} {
+    display: none;
+  }
+}

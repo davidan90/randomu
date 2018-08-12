@@ -1,0 +1,15 @@
+@import "colors";
+
+.more-button__spinner,
+.more-button {
+  margin-top: 0.5rem;
+}
+
+.more-button {
+  background: $blue-light-color;
+  border-radius: 5px;
+  color: $white-color;
+  cursor: pointer;
+  height: 2rem;
+  width: 100%;
+}

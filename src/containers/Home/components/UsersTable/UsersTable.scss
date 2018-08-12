@@ -1,0 +1,76 @@
+@import "mixins";
+@import "colors";
+@import "responsive";
+
+.table {
+  width: 100%;
+
+  .tr {
+    .th,
+    .td {
+      @include flex(row, center, center);
+
+      height: 100%;
+      text-align: center;
+
+      &:last-child {
+        @media #{$screen-s} {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .table-head,
+  .table-body {
+    width: 100%;
+  }
+
+  .table-head .tr,
+  .table-body .tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media #{$screen-s} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .table-head .tr {
+    background-color: $gray-light-color;
+    font-weight: bold;
+    height: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .table-body {
+    @include flex(column, inherit, inherit);
+
+    .tr {
+      height: 3rem;
+      transition: transform 0.3s;
+
+      &:nth-child(even) {
+        background-color: $gray-light-color;
+      }
+
+      &:hover {
+        background-color: $blue-light-color;
+        cursor: default;
+        transform: scale(1.03);
+      }
+
+      .td {
+        &:first-child {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  &.empty {
+    background-color: $gray-light-color;
+    text-align: center;
+    width: 100%;
+  }
+}

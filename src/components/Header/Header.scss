@@ -1,0 +1,39 @@
+@import "mixins";
+@import "responsive";
+@import "colors";
+
+.main-header {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.75);
+  padding: 0.5rem 0;
+
+  @media #{$screen-l} {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .main-header__section {
+    @include flex(row, center, space-between);
+
+    padding: 0 1rem;
+
+    .main-header__title {
+      display: inline-block;
+
+      h1 {
+        color: $blue-dark-color;
+        font-size: 3rem;
+
+        @media #{$screen-s} {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-s} {
+    background-color: $white-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
