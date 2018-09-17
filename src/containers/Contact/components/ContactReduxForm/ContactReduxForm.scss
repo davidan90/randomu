@@ -1,0 +1,48 @@
+@import "mixins";
+@import "responsive";
+@import "colors";
+
+.contact-form {
+  @include flex(column, center, inherit);
+
+  width: 100%;
+
+  .contact-form__input {
+    height: 1.5rem;
+    margin: 0.5rem 0;
+    min-width: 550px;
+    width: 50%;
+
+    @media #{$screen-s} {
+      min-width: inherit;
+      width: 100%;
+    }
+  }
+
+  .contact-form__error {
+    color: $red-color;
+    font-size: 0.8rem;
+  }
+
+  textarea.contact-form__input {
+    height: 5rem;
+    resize: none;
+  }
+
+  button {
+    border-radius: 5px;
+    height: 2rem;
+    width: 5rem;
+
+    &:enabled {
+      background: $blue-light-color;
+      color: $white-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.confirm-msg {
+  margin: 0.7rem 0;
+  text-align: center;
+}

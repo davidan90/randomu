@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ContactForm } from './components';
+import { ContactReduxForm } from './components';
 import './Contact.scss';
 
 class Contact extends React.Component {
@@ -14,7 +14,8 @@ class Contact extends React.Component {
           <h2>Contact</h2>
         </div>
         <article className='contact-section__article'>
-          <ContactForm />
+          {/* <ContactForm /> */}
+          <ContactReduxForm />
         </article>
       </section>
     );
