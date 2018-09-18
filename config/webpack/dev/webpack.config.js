@@ -8,7 +8,7 @@ module.exports = {
   mode: 'development',
   devtool: '#eval-source-map',
   entry: [
-    'babel-polyfill',
+    '@babel/polyfill',
     `webpack-dev-server/client?${PROTOCOL}://${HOST}:${PORT}`,
     'webpack/hot/only-dev-server',
     './src/index.js',

@@ -7,7 +7,7 @@ module.exports = {
   mode: "production",
   devtool: "#source-map",
   entry: {
-    babelpolyfill: 'babel-polyfill',
+    babelpolyfill: '@babel/polyfill',
     index: './src/index.js',
   },
   output: {
