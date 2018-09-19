@@ -23,5 +23,9 @@
         ]
       }
     ]
+  },
+  "settings": {
+    "pragma": "React",
+    "version": "16.4"
   }
 }
