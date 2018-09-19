@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const prodPlugins = require('./plugins');
+const plugins = require('../plugins');
 const loaders = require('../loaders');
+const { TITLEPRO } = require('../env');
 
 module.exports = {
   mode: "production",
@@ -24,5 +25,13 @@ module.exports = {
   module: {
     rules: loaders
   },
-  plugins: prodPlugins(webpack),
+  plugins: [
+    plugins.cleanPlugin(path.resolve(__dirname, './../../../dist')),
+
+    plugins.htmlPlugin('./src/index.html', TITLEPRO),
+
+    plugins.envPlugin(webpack)('production'),
+
+    plugins.providePlugin(webpack)()
+  ],
 };

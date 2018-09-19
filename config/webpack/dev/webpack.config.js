@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const plugins = require('../plugins');
 const loaders = require('../loaders');
-const devPlugins = require('./plugins');
-const { PROTOCOL, HOST, PORT } = require('../env');
+const { PROTOCOL, HOST, PORT, TITLEDEV } = require('../env');
 
 module.exports = {
   mode: 'development',
@@ -24,5 +24,13 @@ module.exports = {
   module: {
     rules: loaders,
   },
-  plugins: devPlugins(webpack),
+  plugins: [
+    plugins.hotReplacementPlugin(webpack),
+
+    plugins.htmlPlugin('./src/index.html', TITLEDEV),
+
+    plugins.envPlugin(webpack)('development'),
+
+    plugins.providePlugin(webpack)
+  ],
 };
