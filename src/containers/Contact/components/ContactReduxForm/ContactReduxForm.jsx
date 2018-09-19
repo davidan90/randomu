@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { func, bool, string, object } from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';

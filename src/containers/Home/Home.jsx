@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { func, bool, array } from 'prop-types';
 import { connect } from 'react-redux';
 import { getAllUsers } from 'store/users/actions';

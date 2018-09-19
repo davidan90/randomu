@@ -12,6 +12,8 @@
     "import/no-unresolved": "off",
     "no-undef": "off",
     "no-console": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-no-undef": "off",
     "react/jsx-filename-extension": [
       "error",
       {

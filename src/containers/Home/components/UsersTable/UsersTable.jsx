@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { arrayOf, object } from 'prop-types';
 import './UsersTable.scss';
 

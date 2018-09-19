@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Navbar from '../Navbar';
 import NavBarMobile from '../NavbarMobile';
 import './Header.scss';

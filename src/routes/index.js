@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Home, Contact } from 'containers';
 import { NotFound } from 'components';

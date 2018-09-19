@@ -15,5 +15,8 @@ module.exports = webpack => [
     "process.env": {
       NODE_ENV: JSON.stringify('production')
     }
+  }),
+  new webpack.ProvidePlugin({
+    React: 'react'
   })
 ];

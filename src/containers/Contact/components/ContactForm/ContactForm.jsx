@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { func, bool } from 'prop-types';
 import { connect } from 'react-redux';
 import { sendContactForm } from 'store/contact/actions';
