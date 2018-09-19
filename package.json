@@ -30,7 +30,8 @@
     "test:overwrite:snap": "npm test -- -u",
     "coverage:open:mac": "open coverage/lcov-report/index.html",
     "coverage:open:linux": "xdg-open coverage/lcov-report/index.html",
-    "storybook": "start-storybook -p 9999 -c ./config/storybook",
+    "storybook": "npm run storybook:open:linux && start-storybook -p 9999 -c ./config/storybook",
+    "storybook:open:linux": "xdg-open http://localhost:9999",
     "precommit": "npm run lint && npm run lint:css"
   },
   "devDependencies": {
@@ -55,6 +56,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
+    "@storybook/addon-storyshots": "^4.0.0-alpha.21",
     "@storybook/react": "^4.0.0-alpha.21",
     "autoprefixer": "^9.0.1",
     "babel-core": "^7.0.0-bridge.0",
@@ -62,6 +64,7 @@
     "babel-jest": "^23.4.0",
     "babel-loader": "^8.0.0",
     "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-require-context-hook": "^1.0.0",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "eslint": "^5.3.0",
@@ -81,6 +84,7 @@
     "postcss": "^7.0.1",
     "postcss-loader": "^2.1.6",
     "prettier": "^1.14.0",
+    "react-test-renderer": "^16.5.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
     "stylelint": "^9.3.0",
