@@ -1,6 +1,6 @@
 @import "mixins";
 @import "responsive";
-@import "colors";
+@import "palette";
 
 .contact-form {
   @include flex(column, center, inherit);
