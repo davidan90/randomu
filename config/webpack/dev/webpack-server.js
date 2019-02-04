@@ -9,6 +9,7 @@ opn(`${PROTOCOL}://${HOST}:${PORT}`);
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
+  open: true,
   inline: true,
   historyApiFallback: true,
   noInfo: true,
