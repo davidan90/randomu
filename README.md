@@ -16,7 +16,20 @@
 - Redux-saga
 - Prop-types
 
-## Start running
+## Start running (docker)
+``` bash
+# build image
+docker image build . -t randomu
+
+# run container in port 80
+docker container run -d -p 80:3000 randomu
+
+# run container with volume for development
+docker container run -d -p 80:3000 -v $(pwd)/src:/home/node/randomu/src randomu
+```
+
+
+## Start running (local)
 
 ``` bash
 # install dependencies
